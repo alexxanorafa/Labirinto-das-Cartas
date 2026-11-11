@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Labirinto das Cartas</title>
+<meta name="description" content="Uma viagem por três leituras, sete casas e as forças invisíveis de uma relação.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#mapa">Saltar para o mapa</a>
+
+<header class="topo">
+  <div>
+    <h1>Labirinto das Cartas</h1>
+    <p class="sub">Uma viagem por três leituras, sete casas e as forças invisíveis de uma relação.</p>
+  </div>
+  <nav class="acoes" aria-label="Opções">
+    <button id="btnLeitura" type="button" aria-pressed="false">Modo leitura linear</button>
+    <button id="btnReset" type="button">Reiniciar progresso</button>
+  </nav>
+</header>
+
+<main>
+  <section id="prologo" class="painel">
+    <h2>Prólogo</h2>
+    <p id="pergunta"></p>
+    <p>Três tiragens do método <strong>A Taça</strong> (duas de Baralho Cigano de Patrícia Jarimba, uma de Tarot) respondem às mesmas sete casas. Cada câmara do labirinto corresponde a uma casa e guarda as três cartas dessa posição. Vira-as, compara-as e vê como se cruzam.</p>
+    <p class="aviso" id="aviso"></p>
+  </section>
+
+  <section id="vista-labirinto">
+    <section id="mapa" class="painel" aria-labelledby="h-mapa">
+      <h2 id="h-mapa">O Mapa</h2>
+      <p class="progresso"><span id="progTxt"></span> <span class="barra"><span id="barra"></span></span></p>
+      <div id="svgWrap"></div>
+      <ol id="lista" class="lista" aria-label="Câmaras"></ol>
+      <ul class="legenda" aria-hidden="true">
+        <li><i class="l0"></i> por explorar</li><li><i class="l1"></i> em exploração</li><li><i class="l2"></i> explorada</li>
+      </ul>
+    </section>
+
+    <section id="vetores" class="painel" aria-labelledby="h-vet">
+      <h2 id="h-vet">Os Três Vetores</h2>
+      <p>A carta oculta de cada tiragem condiciona a leitura de todas as outras casas.</p>
+      <div id="vetGrid" class="vetGrid"></div>
+    </section>
+
+    <section id="sintese" class="painel" aria-labelledby="h-sin">
+      <h2 id="h-sin">A Câmara da Síntese</h2>
+      <p id="sinBloq" class="bloq"></p>
+      <div id="sinConteudo"></div>
+    </section>
+  </section>
+
+  <section id="leitura" class="painel" hidden aria-label="Leitura linear"></section>
+</main>
+
+<footer class="rodape">
+  <p>Estudo de caso anonimizado. Interpretação simbólica, não prova factual. <span id="ver"></span></p>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitulo"></dialog>
+
+<script src="dados.js"></script>
+<script src="motor.js"></script>
+</body>
+</html>
