@@ -3,7 +3,7 @@ const ESTUDO = {
   titulo: "Estudo I — O Vínculo",
   versao: "1.0",
   pergunta:
-    "Estudo de caso: três leituras sobre a mesma relação, com a pergunta de fundo sobre vínculo, reserva e desconhecimento (incluindo se a outra pessoa mantém envolvimentos íntimos com terceiros).",
+    "Estudo de caso: três leituras sobre a mesma relação, com a pergunta de fundo sobre vínculo, reserva e desconhecimento.",
   aviso:
     "Esta experiência não determina factos, comportamentos ou intenções de terceiros. Mostra como uma leitura simbólica se constrói — e onde deixa de responder.",
 };
